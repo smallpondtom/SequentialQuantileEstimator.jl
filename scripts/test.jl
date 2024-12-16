@@ -6,7 +6,7 @@ using Statistics
 
 ## Generate the data samples (comment/uncomment the desired distribution)
 Random.seed!(123) # Setting the seed
-dist = Normal(0.16, 0.05)                                 # Normal distribution
+dist = Normal(0.1, 0.05)                                 # Normal distribution
 # dist = MixtureModel([dist, Normal(0.5, 0.1)], [0.5, 0.5]) # Mixture of two normals
 # dist = Beta(2.0, 5.0)                                     # Beta distribution
 # dist = Exponential(0.5)                                   # Exponential distribution
@@ -65,11 +65,11 @@ println("KLL median estimate: ", SQE.KLL.kll_get_quantile(est_kll, 0.5))
 with_theme(theme_latexfonts()) do 
     fig = Figure(size=(1100, 600))
     ax = Axis(
-        fig[1, 1], xlabel = "Sample", ylabel = "Median Estimate",
+        fig[1, 1], xlabel = "Sample", ylabel = "Median Estimate", title=L"Median Estimation Per Sample for $\mathcal{N}(0.1, 0.05)$",
         titlesize=30, xlabelsize=30, ylabelsize=30, xticklabelsize=25, yticklabelsize=25,
         limits=(-20, length(data)+20, nothing, nothing)
     )
-    l1 = hlines!(ax, true_median, color=:black, linewidth=4)
+    l1 = hlines!(ax, true_median, color=:black, linewidth=4, linestyle=:dash)
     l2 = lines!(ax, 1:length(data), meds["P2"], linewidth=3)
     l3 = lines!(ax, 1:length(data), meds["GK"], linewidth=3)
     l4 = lines!(ax, 1:length(data), meds["t-Digest"], linewidth=3)

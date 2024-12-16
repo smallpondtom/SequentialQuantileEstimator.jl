@@ -28,6 +28,11 @@ The package includes four well-known algorithms for quantile estimation:
    - Good balance between accuracy, memory, and complexity.
    - &#9888; This is currently a simplified implementation (for the exact implementation see the work by Karnin et al.)
 
+## Example
+The plot below shows the estimation of the median for a normal distribution with mean 0.1 and variance 0.05 over 1000 sample points of all 4 implemented algorithms.
+
+![example plot](assets/example.png)
+
 ## Installation
 
 Currently, this package is not registered in Julia’s General registry. To use it, add the package directly from the GitHub repo into your project’s environment:
