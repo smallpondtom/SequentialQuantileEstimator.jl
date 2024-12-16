@@ -30,13 +30,13 @@ The package includes four well-known algorithms for quantile estimation:
 
 ## Installation
 
-Currently, this package is not registered in Julia’s General registry. To use it, clone the repository and include it in your project’s environment:
+Currently, this package is not registered in Julia’s General registry. To use it, add the package directly from the GitHub repo into your project’s environment:
 
-```julia
-] add path/to/SequentialQuantileEstimator
+```julia-repl
+(@v1.11) pkg> add https://github.com/smallpondtom/SequentialQuantileEstimator.jl.git
 ```
 
-Alternatively, you can use `include` directly if you have the files locally.
+Alternatively, you can use `include` directly if you have the files cloned locally.
 
 ## Usage
 
