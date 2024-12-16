@@ -1,0 +1,6 @@
+[deps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+SequentialQuantileEstimator = "a10d28a5-d1c8-4bef-92cc-d118ea2023a9"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
