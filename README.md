@@ -63,7 +63,7 @@ algorithms/
 ### Example: Estimating the Median
 
 ```julia
-import SequentialQuantileEstimator: SQE
+import SequentialQuantileEstimator as SQE
 
 data = randn(1000)
 
