@@ -101,7 +101,7 @@ println("KLL median estimate: ", SQE.KLL.kll_get_quantile(kll_est, 0.5))
 
 Most estimators can be initialized with multiple quantiles. For example, with P²:
 ```julia
-import SequentialQuantileEstimator: SQE
+import SequentialQuantileEstimator as SQE
 p2_multi = SQE.P2.p2_init([0.25, 0.5, 0.75])
 for x in randn(1000)
     p2_multi = SQE.P2.p2_update!(p2_multi, x)
